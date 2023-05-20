@@ -1,2 +1,2 @@
 # javascript
- Anotações de Estudo - área principal
+ Anotações sobre Javascript - destaques
