@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de dados</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Aprendendo Javascript</h1>
+    <p>exemplo de variaveis usando templetstrings, equivale a formatação no python:</p>
+    <section class="terminal">
+        <code>
+            > idade = 19 <br>
+            19 <br>
+            > nome = 'Pedro' <br>
+            Pedro <br>
+            > nota = 8.5 <br>
+            8.5 <br>
+            > `o aluno ${aluno} de ${idade} anos tem notas de até ${nota}` <br>
+            'o aluno Pedro de 19 anos tem notas de até 8.5 
+            <br><br>
+            > n1 = 1678.9 <br>
+            1678.9 <br>
+            > n1.toFixed(2) <br>
+            '1678.90' <br>
+            > n1.toFixed(2).replace('.',',') <br>
+            '1678,90' 
+            <br><br>
+            > n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) <br>
+            'R$ 1.678,90'
+        </code>
+    </section>
+    <br>
+    <script>
+        var nome = window.prompt('Digite seu nome abaixo!') // por numa variavel para salvar a informaçao
+        window.alert('Seja muito Bem-Vindo, '+ nome) // o (+) serve para concatenar a mensagem com a variavel
+
+        document.write(`Seu nome tem ${nome.length} letras <br>`) // contador de caracteres da variavel
+        document.write(`<strong>${nome}</strong> <br>`) // e possivel usar tags html tbm
+        document.write(`${nome.toUpperCase()} <br>`) // poe em caixa alta a string
+        document.write(`${nome.toLowerCase()}`) // poe em caixa baixa a string
+
+        var num1 = Number(window.prompt('digite um numero'))  //String(), transformar em string, ha tbm variavel.toString()
+        var num2 = Number(window.prompt('digite outro numero')) // Number(), transformar em number, ha tbm NumberparseInt() e NumberparseFloat()
+    
+        soma = num1 + num2
+        window.alert(`${num1} + ${num2} = ${soma}`)
+    </script>
+</body>
+</html>

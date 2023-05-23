@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+html{
+    background-color: blueviolet;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+section.terminal{
+    background-color: black;
+}
