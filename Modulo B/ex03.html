@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores em JS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <button><a href="ex02.html">Voltar</a></button>
+    <h3>Aritmeticos</h3>
+    <ul>
+        <li>(+) somar</li>
+        <li>(-) subtrair</li>
+        <li>(*) multiplicar</li>
+        <li>(/) dividir</li>
+        <li>(%) resto da divisao</li>
+        <li>(**) potenciaçao</li>
+
+        <p>ordem de precedencia: () >  **  >  % e / e *  >  + e -</p>
+    </ul>
+    <h3>Atribuicao:</h3>
+    <ul>
+        <li>x = x + 1 -> x += 1</li>
+        <li>x = x + 1 -> x++</li>
+        <p>x = 5 <br>x +=4 <br>x-= 2 <br>x = 7</p>
+
+        <p>funciona com quase todos os operadores aritimeticos, e possivel fazer na mesma variavel</p>
+    </ul>
+    <h3>Relacionais:</h3>
+    <ul>
+        <li>> maior q</li>
+        <li>< menor q</li>
+        <li>>= maior igual a</li>
+        <li><= menor igual a</li>
+        <li>== igual</li>
+        <li>!= diferente</li>
+
+        <p>resultado sera um valor bolleano (True/False)</p>
+        <li>=== igual tanto no tipo quanto no conteudo <br>
+        ex: 5 == 5 (true) 5 == '5' (true) //>// 5 === 5 (true) 5 === '5' (false)</li>
+    </ul>
+    <h3>Logicos:</h3>
+    <ul>
+        <li>! negacao !T = F / !F = T</li>
+        <li>&& conjucao T+T=T / T+F=F / F+T=F / F+F=F</li>
+        <li>|| disjuncao T+T=T / T+F=T / F+T=T / F+F=F</li>
+
+        <p> aritmeticos > relacionais > ! > && > ||</p>
+    </ul>
+    <h3>Ternario:</h3>
+    <ul>
+        <li>teste ? true : false</li>  
+    </ul>
+        <section class="terminal">
+            var media = 6.5 <br>
+            undefined <br> 
+            > media >= 7?'PASSOU':'NAO PASSOU' <br>
+            'NAO PASSOU' <br>
+            > var media = 7 <br>
+            undefined <br>
+            > media >= 7?'PASSOU':'NAO PASSOU' <br>
+            'PASSOU' <br>
+            > var x = 8 <br>
+            undefined <br>
+            > var resp = x % 2 == 0 ? 5 : 9 <br>
+            undefined <br>
+            > resp <br>
+            5 <br>
+            > var idade = 19 <br>
+            undefined <br>
+            > var r = idade >= 18 ? 'Maior':'Menor' <br>
+            undefined <br>
+            > r <br>
+            'Maior'
+        </section>
+    
+</body>
+</html>
