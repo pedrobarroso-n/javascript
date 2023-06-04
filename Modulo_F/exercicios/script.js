@@ -10,7 +10,7 @@ function Enum(n){ // se e numero
         return false
     }
 }
-function inlista(n, l){ //se ja esta na lista
+function inlista(n, l){ //se ja esta na lista, (n) para o num.value e (l) para o valores
     if(l.indexOf(Number(n)) != -1){
         return true
     }else{
@@ -26,10 +26,10 @@ function adicionar(){ //adicionar ao select
     }else{
         window.alert('Valor invalido ou ja encontrado')
     }
-    num.value = ''
-    num.focus()
+    num.value = '' //para o numero sumir apos ser adicionado
+    num.focus()  //foca o mouse no input para n precisar clicar novamente
 }
-function finalizar(){ //
+function finalizar(){ //mostrar as informaçoes extras apos clicar
     if(valores.length == 0){
         window.alert('Adicione valores')
     }else{
@@ -46,7 +46,7 @@ function finalizar(){ //
                 menor = valores[pos]
         }
         media = soma / tot
-        res.innerHTML = ''
+        res.innerHTML = '' //para o html começar vazio antes de adicionar as informaçoes abaixo
         res.innerHTML += `<p>Ao todo a ${tot} elementos</p>`
         res.innerHTML += `<p>Maior valor encontrado ${maior} <br>Menor valor encontrado ${menor}</p>`
         res.innerHTML += `<p>A soma de todos os valores é ${soma} <br> A media dos itens da ${media}</p>`
