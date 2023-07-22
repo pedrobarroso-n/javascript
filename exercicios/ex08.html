@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios em JS</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        header{
+            text-align: center;
+            color: white;
+        }
+        section{
+            background-color: white;
+            width: 50vw;
+            padding: 15px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.384);
+        }
+        footer{
+            color: white;
+            font-style: italic;
+            text-align: center;
+        }
+        img{
+            display: block;
+            width: 23vw;
+            height: 23vw;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de nascimento:
+                <input type="number" name="nasc" id="nasc">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sex" id="M"><label for="M">Masculino</label>
+                <input type="radio" name="sex" id="F"><label for="F">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ter um resultado
+        </div>
+    </section>
+    <script src="script-3.js"></script>
+</body>
+</html>
