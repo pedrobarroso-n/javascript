@@ -1,5 +1,5 @@
 ## Anotações
-<a href="https://pedrobarroso-n.github.io/javascript/dom/ex04.html">Anotações</a>
+Anotações em forma de documentação nos arquivos
 
 ## Exercicíos
 <a href="https://pedrobarroso-n.github.io/javascript/exercicios/ex07.html">Exercicio I</a><br>
