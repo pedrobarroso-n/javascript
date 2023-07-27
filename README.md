@@ -1,7 +1,7 @@
 ## Anotações
 Anotações em forma de documentação nos arquivos, para ver mais os resultado de melhor forma use a url com o caminho dos arquivos no github pages 
 
-ex... https://pedrobarroso-n.github.io/javascript/dom/test03.html
+ex. https://pedrobarroso-n.github.io/repositorio/pasta/arquivo
 
 ## Exercicíos
 <a href="https://pedrobarroso-n.github.io/javascript/exercicios/ex07.html">Exercicio I</a><br>
