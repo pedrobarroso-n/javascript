@@ -3,10 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Manipular Imagens</title>
+  <style>
+    section{ /*parte onde se encontra todos os elementos*/
+      text-align: center;
+      padding: 20px;
+    }
+
+    #img-normal{ 
+      transition: 0.3s; /*usado no :hover*/
+      cursor: pointer; /*para o cursor ficar como se a parte fosse clicavel (maozinha)*/
+    }
+    #img-normal:hover{
+      width: 41%; /*aumentar a img quando passar o mouse por cima*/
+    }
+
+    div{
+      display: none; /*nao aparece por padrao, e ativado quando clicado na img-normal*/
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7); /*efeito de transparencia no fundo*/
+      width: 100%;
+      height: 100%;
+      position: fixed; /*para as 3 configuracoes abaixo serem executadas corretamente*/
+      top: 0;
+      left: 0;
+      z-index: 1; /*indica a ordem de pilha, a maior sempre sera impilhada em cima da menor, se negativa itens normais (sem z-index) seram exibidos por cima deste*/
+    }
+
+    #img-expandida{ /*configuracoes da img q aparece quando clicado em cima*/
+      width: 70%;
+      height: 70%;
+      margin: 9%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+  </style>
 </head>
 <body>
-  <a href="https://chat.openai.com/share/ade12180-9a0c-4cbb-a8ca-5ba18cdb61ff" target="_blank" style="font-family: monospace;">Ver como isso funciona e implementar na documentação</a>
+
+  <section>
+    <img id="img-normal" src="../exercicios/imagens/pexels-pixabay-206359.jpg" width="40%" onclick="expandirImagem()">
+    <div onclick="incolherImagem()">
+      <img id="img-expandida" src="../exercicios/imagens/pexels-pixabay-206359.jpg" width="40%">
+    </div>
+  </section>
 
   <script src="test-2.js"></script>
 </body>
