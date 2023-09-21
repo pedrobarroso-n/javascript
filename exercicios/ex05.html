@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: rgb(40, 199, 40);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        h4 > a{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <button><a href="test03.html">Prosseguir</a></button>
+    <button><a href="test01.html">Voltar</a></button>
+
+    <div id="area">Interagir</div>
+
+    <h2>Soma:</h2>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Some" onclick="somar()">
+    <div id="resp">Resultado</div>
+
+    <br>
+    <h4><a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank"> Ver lista de eventos DOM</a></h4>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrou)
+        a.addEventListener('mouseout',saiu)
+
+        function clicar(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrou(){
+            a.innerText = 'Entrou!'
+        }
+        function saiu(){
+            a.innerText ='Saiu!'
+            a.style.background = 'rgb(40, 199, 40)'
+        }
+
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('resp')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            s = n1 + n2
+            resp.innerHTML = `${n1} + ${n2} = ${s}`
+        }
+    </script>
+</body>
+</html>

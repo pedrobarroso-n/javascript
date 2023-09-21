@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button><a href="test02.html">Prosseguir</a></button>
+
+    <h1>Estudos sobre DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>JV manipulando <strong>DOM</strong></p>
+    <p>oiiiii</p>
+    <div id="mensagem" class="sms" name="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        
+        var p1 = window.document.getElementsByTagName('p')[1] // 1 pois pera o segundo paragrafo
+        var d = document.getElementById('mensagem') 
+        var d2 = document.getElementsByName('msg')
+        var d3 = document.getElementsByClassName('sms')
+        var d4 = document.querySelector('div.sms')
+
+        window.document.write('Esta escrito: '+ p1.innerText) //mostrar oq ta escrito
+        p1.style.color = 'yellow' //mudei a cor do elemento
+        corpo.style.backgroundColor = 'skyblue' //mudei a cor de fundo
+        document.write(p1.innerHTML) //html pela as formataçoes
+        window.alert(p1.innerText) //text pega so a parte escrita
+        d.innerText = 'estou modificando...' //mudei oq tava escrito
+        d2.innerText = 'pao ksksks' 
+        d3.innerText = 'ahhhh ze da manga'
+        d4.style.backgroundColor = 'blue' 
+    </script>
+</body>
+</html>
