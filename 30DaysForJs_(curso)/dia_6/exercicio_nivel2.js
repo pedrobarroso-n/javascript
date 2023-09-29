@@ -41,7 +41,92 @@ let principal = [], secundarios = []
 for(const tamanho in countries){
     secundarios = [countries[tamanho], countries[tamanho].slice(0,3).toLocaleUpperCase(), countries[tamanho].length]
     principal.push(secundarios)
-    console.log(secundarios)
-}     // por os arrays menores em um array principal
+    console.log(principal)
+} 
 
-//  ...continuar apartir do 7º...
+let haveLand = []
+for (const have in countries){
+    if (countries[have].includes('land') === true){
+        haveLand.push(countries[have])
+    }
+}
+console.log(haveLand)
+
+let haveIa = []
+for (const have in countries){
+    if (countries[have].match(/ia$/)){  // ja retorna true por padrao por isso não precisa comparar
+        haveIa.push(countries[have])
+    }
+}
+haveIa.length != 0 ? console.log(haveIa) : console.log('Nenhum desses países terminam com ia')
+
+let maior = countries[0];
+for (let tamanho = 1; tamanho < countries.length; tamanho++){
+    if (maior.length < countries[tamanho].length){
+        maior = countries[tamanho]
+    }
+}
+console.log(maior)
+
+let fiveLength = []
+for (const isfive in countries){
+    if (countries[isfive].length === 5){
+        fiveLength.push(countries[isfive])
+    }
+}
+console.log(fiveLength)
+
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+let maior2 = webTechs[0]
+for (let index = 1; index < webTechs.length; index++){
+    if(maior2.length < webTechs[index].length){
+        maior2 = webTechs[index]
+    }
+}
+console.log(maior2)
+
+let um = [], dois = []
+for (const tamanho in webTechs){
+    dois.push(webTechs[tamanho], webTechs[tamanho].length)
+    um.push(dois)
+    dois = []
+}
+console.log(um)
+
+const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+let sigla = ''
+for(const percorre in mernStack){
+    sigla+= mernStack[percorre].slice(0,1)
+}
+console.log(sigla)
+
+let i = 0;
+do{
+    console.log(webTechs[i])
+    i++
+} while (i < webTechs.length);
+
+let fruits = ['banana', 'orange', 'mango', 'lemon']
+let o = fruits.length-1
+while (o >= 0){
+    fruits.push(fruits[o])
+    o--
+}
+fruits.splice(0,4)
+console.log(fruits)
+
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+]
+
+for (const percorre in fullStack[0]){console.log(fullStack[0][percorre])}
+for (const percorre in fullStack[1]){console.log(fullStack[1][percorre])}
