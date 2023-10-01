@@ -1,11 +1,16 @@
-## javascript
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" width="15%">
+    <h3>JavaScript</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" width="18%">
+    <br><br>
+    <p><small>{ Web Language }</small></p>
 </div>
 
+<br>
+
 <h3>referências de estudo</h3>
+<hr>
 <pre>
-<a href="https://github.com/Asabeneh/30-Days-Of-JavaScript">Github Repository (for Asabeneh)</a>
+<a href="https://github.com/Asabeneh/30-Days-Of-JavaScript">Github Repository (made by Asabeneh)</a>
 <a href="https://www.freecodecamp.org/portuguese/learn/javascript-algorithms-and-data-structures/">Freecodecamp.org</a>
 <a href="https://www.w3schools.com/js/default.asp">W3schools.com</a>
 <a href="https://www.cursoemvideo.com/curso/javascript/">CursoemVideo.com</a>
