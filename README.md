@@ -1,4 +1,7 @@
 ## javascript
+<div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" width="15%">
+</div>
 
 <h3>referências de estudo</h3>
 <pre>
