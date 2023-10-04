@@ -1,4 +1,5 @@
-/*let quantIds = parseInt(prompt('Quantos Ids vai querer')), tamanIds = parseInt(prompt('Qual o tamanho de seus Ids'))
+/*
+let quantIds = parseInt(prompt('Quantos Ids vai querer')), tamanIds = parseInt(prompt('Qual o tamanho de seus Ids'))
 function userIdGeneratorByUser(){
     const ID = new Array, codes = new Array
     const caracteres = ['b',1,9,'A','c','D',5,3,'C',8,'d',7,'f',2,'B',6,'F',4,'a',0,'e','E']
@@ -12,7 +13,8 @@ function userIdGeneratorByUser(){
     } while (quantIds > 0)
     return alert(codes.join('\n'))
 }
-userIdGeneratorByUser()   // funciona mas os Ids se repetem*/
+userIdGeneratorByUser()   // funciona mas os Ids se repetem
+*/
 
 function rgbColorGenerator(){
     const rgb = new Array
@@ -137,3 +139,36 @@ function isPrime(num){
     } return console.log('Not is Prime')
 }
 isPrime(11)
+
+// Pulei 16/17
+
+const isValidVariable = function(name_var){
+    if (name_var[0] == '$' || name_var[0] == '_' || /^\D/.test(name_var)){
+        return console.log('Value Variable')
+    } return console.log('Invalue Variable')
+}
+isValidVariable('pulso')
+isValidVariable('_name')
+isValidVariable('10conto')
+
+function sevenrandomNumbers(){
+    const array = new Array
+    const numbers = [0,1,2,3,4,5,6,7,8,9]
+    for (let quant = 0; quant < 7; quant++){
+        array[quant] = numbers.splice(Math.floor(Math.random() * 10), 1).join()
+        if (array[quant] === ''){
+            array.splice(quant, 1)
+            quant--
+        } else{continue}
+    }
+    return console.log(array)
+}
+sevenrandomNumbers()
+
+const countries = ['Albania','Bolivia','Canada','Denmark','Ethiopia','Finland','Germany','Hungary','Ireland','Japan','Kenya']
+function reverseCountries(){
+    let reverse = []
+    for (let init = countries.length-1; init >= 0; init--){reverse.push(countries[init])}
+    return console.log(reverse)
+}
+reverseCountries()
