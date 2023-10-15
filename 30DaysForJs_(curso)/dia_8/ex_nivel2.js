@@ -61,22 +61,24 @@ for (let i = 1; i < allUser.length; i++){
 }
 console.log(userPoints)
 
-/* ---| ARRUMAR |---
-
 const mernStack = ['MongoDB', 'Express', 'React', 'Node']
-let userMern = [];
-var count = 0
-for (let i = 0; i < allUser.length; i++){
-  for (let c = 0; c < mernStack.length; c++){
-    if (mernStack[c] in users[allUser[i]].skills){
+const Allusers = Object.keys(users)
+const array = []
+let count = 0
+let percorrer = 0
+while (percorrer < Allusers.length){
+  for (let i = 0; i < users[Allusers[percorrer]].skills.length; i++){
+    if (mernStack[0] === users[Allusers[percorrer]].skills[i] || mernStack[1] === users[Allusers[percorrer]].skills[i] || mernStack[2] === users[Allusers[percorrer]].skills[i] || mernStack[3] === users[Allusers[percorrer]].skills[i]){
       count++
     }
   }
-  if (count === 4){
-    userMern.push(allUser[i])
+  if (count === 4){ 
+    array.push(Allusers[percorrer]) 
   }
+  count = 0
+  percorrer++
 }
-*/
+console.log(array)
 
 const copyUsers = Object.assign({}, users)
 copyUsers.Pedro = {
