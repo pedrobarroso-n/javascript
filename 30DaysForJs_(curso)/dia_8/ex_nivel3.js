@@ -150,19 +150,35 @@ function rateProduct(name, id, rate){
 }
 rateProduct('Laptop','eefamr',4.7)
 
-// ARRUMAR //
 function AvaregeRating(name){
     let totalRate = 0.0
-    for (let i = 0; i <= Object.keys(products).length; i++){
+    for (let i = 0; i < Object.keys(products).length; i++){
         if (products[i].name === name){
             for (let c = 0; c < products[i].ratings.length; c++){
                 totalRate += products[i].ratings[c].rate
-                console.log(totalRate)
             }
             totalRate /= products[i].ratings.length
         }
     }
     return `Media rate = ${totalRate}/5`
 }
-AvaregeRating('mobile phone')
-//        //
+console.log(AvaregeRating('TV'))
+
+// quarta questao
+
+function likeProduct(name){
+    for (let i = 0; i < Object.keys(products).length; i++){
+        if (name === products[i].name){
+            if (products[i].likes.length === 0 ){ 
+                products[i].likes.push('fg12cy')  // like
+                return 'Like'
+            } 
+            else { 
+                products[i].likes.pop()  // deslike
+                return 'Deslike'
+            }   
+        } 
+    }
+    return 'product not found'  // caso n ache o produto
+}
+console.log(likeProduct('mobile phone'))
