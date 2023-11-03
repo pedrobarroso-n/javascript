@@ -42,7 +42,22 @@ const countries = [
 console.log(countries.filter(categorizeCoutries => categorizeCoutries.endsWith('ia')))
 
 // quarta questao
-// ?-----
+let array = countries.map(letterCount => letterCount.slice(0, 1))
+const newArray = []
+
+let letter, allLetters = 0, counting = 0
+
+while (allLetters < array.length) {
+    letter = array[allLetters]
+    for (let i = 0; i < array.length; i++){
+        letter === array[i] ? counting++ : counting += 0
+    }
+    array = array.filter(norepet => norepet !== letter).map(element => element)
+    newArray.push({ letra: letter, quantidade: counting })
+    counting = 0
+    allLetters++
+}
+console.log(newArray)
 
 // quinta questao
 function getFirstTenCountries(){
