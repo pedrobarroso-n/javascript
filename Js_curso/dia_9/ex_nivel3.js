@@ -2016,4 +2016,26 @@ console.log(countries.map(mostre => mostre.name).sort())
 console.log(countries.map(mostre => mostre.capital).sort())
 console.log(countries.map(mostre => mostre.population).sort(function(a, b){ return a - b }))
 
-// segunda questao
+// segunda questao  --|IMCOMPLETO - falta mostrar em ordem|--
+
+/***pegar as linguagens do array***/
+let allLanguages = new Array
+for (let i = 0; i < countries.length; i++){
+  for (let c = countries[i].languages.length-1; c >= 0; c--){
+    allLanguages.push(countries[i].languages[c])
+  }
+}
+
+/***contagem e montagem do objeto***/
+const mostSpeak = new Array
+let percorrer = 0, count = 0
+while (percorrer < allLanguages.length){
+  for (let i = allLanguages.length-1; i >= 0; i--){
+    allLanguages[i] === allLanguages[percorrer] ? count++ : count+=0
+  }
+  mostSpeak.push({language: allLanguages[percorrer], counts: count})
+  allLanguages = allLanguages.filter(remove => remove != allLanguages[percorrer]).map(add => add)
+  count = 0
+  percorrer++
+}
+
