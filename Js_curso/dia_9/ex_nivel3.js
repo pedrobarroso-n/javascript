@@ -2034,8 +2034,7 @@ while (percorrer < allLanguages.length){
     allLanguages[i] === allLanguages[percorrer] ? count++ : count+=0
   }
   mostSpeak.push({language: allLanguages[percorrer], counts: count})
-  allLanguages = allLanguages.filter(remove => remove != allLanguages[percorrer]).map(add => add)
+  allLanguages = allLanguages.filter(remove => remove != allLanguages[percorrer]).map(add => add) // excluir as ja usadas
   count = 0
   percorrer++
 }
-
