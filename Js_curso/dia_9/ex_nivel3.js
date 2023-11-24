@@ -2026,15 +2026,32 @@ for (let i = 0; i < countries.length; i++){
   }
 }
 
+let repeats = new Array
+
 /***contagem e montagem do objeto***/
-const mostSpeak = new Array
+let mostSpeak = new Array
 let percorrer = 0, count = 0
 while (percorrer < allLanguages.length){
   for (let i = allLanguages.length-1; i >= 0; i--){
     allLanguages[i] === allLanguages[percorrer] ? count++ : count+=0
   }
+  repeats.push(count) /*para ordernar e compara no proximo bloco*/
   mostSpeak.push({language: allLanguages[percorrer], counts: count})
   allLanguages = allLanguages.filter(remove => remove != allLanguages[percorrer]).map(add => add) // excluir as ja usadas
   count = 0
   percorrer++
 }
+
+/***ordenar por mais repetições***/
+repeats.sort(function(a, b) {return b - a})
+const result = Array(mostSpeak.length)
+let correr = 0
+while(correr < mostSpeak.length){
+  for (let i = repeats.length-1; i >= 0; i--){
+    if (repeats[i] == mostSpeak[correr].counts){
+      result[i] = mostSpeak[correr]
+    }
+  }
+  correr++
+}
+console.log(result)
