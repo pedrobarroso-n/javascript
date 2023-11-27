@@ -2047,3 +2047,49 @@ function mostSpeakLanguages(countries, num){
   return mostSpeak.splice(0, num)
 }
 console.log(mostSpeakLanguages(countries, 7))
+
+// terceira questao
+
+function mostPopulatedCountries(countries, num){
+  const mostPopular = new Array
+  for (let i = 0; i < countries.length; i++){
+    mostPopular.push({country: countries[i].name, population: countries[i].population})
+  }
+  return mostPopular.sort((a, b) => b.population - a.population).slice(0, num)
+}
+console.log(mostPopulatedCountries(countries, 7))
+
+// quarta questao
+
+const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+
+const statistics = {
+  count: () => {return ages.length},
+  sum: () => {return ages.reduce((acc, cur) => acc + cur)},
+  min: () => {return ages.sort((a, b) => a - b).slice(0, 1)},
+  max: () => {return ages.sort((a, b) => b - a).slice(0, 1)},
+  range: function(){ 
+    return this.max() - this.min() 
+  },
+  mean: function(){ 
+    return Math.round(this.sum() / this.count()) 
+  },
+  median: function(){
+    ages.sort((a,b) => a - b)
+    if (ages.length % 2 !== 0){ 
+      return ages[Math.round(ages.length/2)-1] 
+    }else { 
+      return ages.slice((ages.length/2)-1, (ages.length/2)+1)
+    }
+  },
+  mode: function(){
+    const obj = new Array
+    let counting = 0
+    for (let i = 0; i < ages.length; i++){
+      ages.filter(element => element == ages[i] ? counting++ : counting += 0)
+      obj.push({mode: ages[i], count: counting})
+      counting = 0
+    }
+    return obj.sort((a,b) => b.count - a.count).slice(0, 1)
+  }
+}
