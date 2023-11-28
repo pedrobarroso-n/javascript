@@ -2090,6 +2090,31 @@ const statistics = {
       obj.push({mode: ages[i], count: counting})
       counting = 0
     }
-    return obj.sort((a,b) => b.count - a.count).slice(0, 1)
+    obj.sort((a,b) => b.count - a.count)
+    return `(${obj[0].mode}, ${obj[0].count})`
+  },
+  var: function(){
+    return ages.map(element => (element - this.mean())**2).reduce((acc, cur) => acc + cur)/ages.length
+  },
+  std: function(){
+    return Math.sqrt(this.var()).toFixed(1)
+  },
+  freqDist: function(){
+    let ages2 = ages
+    const obj = new Array
+    let counting = 0
+    for (let i = 0; i < ages2.length; i++){
+      ages2.filter(element => element == ages2[i] ? counting++ : counting += 0)
+      obj.push(`(${(counting / this.count() *100).toFixed(1)}, ${ages2[i]})`)
+      counting = 0
+      ages2 = ages2.filter(element => element != ages2[i])
+      i--
+    }
+    return obj.join(', ')
+  },
+  describe: function(){
+    return `Count: ${this.count()} \nSum: ${this.sum()} \nMin: ${this.min()} \nMax: ${this.max()} \nRange: ${this.range()}\nMean: ${this.mean()} \nMedian: ${this.median()} \nMode: ${this.mode()} \nVariance: ${this.var()} \nStandard Deviation: ${this.std()} \nFrequency Distribution: ${this.freqDist()}`
   }
 }
+
+console.log(statistics.describe())
